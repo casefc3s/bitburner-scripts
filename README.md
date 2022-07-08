@@ -11,3 +11,5 @@ It does not upgrade your home server, and it does not buy scripts on the black m
 At some point you'll likely want to kill the server upgrade scripts and save some coin for augments. For me these scripts were meant to just automate the redundant background things so that I can poke around and explore other things in the game. I'm still pretty early on myself, so this is just where I'm at so far.
 
 Feel free to mix and match, modify, etc as you please. If you have some cool changes/suggestions, feel free to raise an issue or PR!
+
+NOTE: the spread.js target selection currently does not follow the normal "use max money server" approach. it used to, but I found the delay in building funds (longer weaken/grow/hack times due to stronger servers) early on to be more of an issue in seeing progress. it probably doesn't pay as well in the end, but that's just my personal preference. less money faster allows for more upgrades sooner, etc, was my mindset.
