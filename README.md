@@ -1,5 +1,5 @@
 # bitburner-scripts
-These are my core basic scripts for automating in the game Bitburner (NS2).
+These are my core basic scripts for automating in the game Bitburner (NS2). A good chunk of it is just built off the tutorials/docs.
 
 ## Basics
 If you already have some progression, you can just start off with this script. Run it and let it do its thing and it will progressively upgrade (personal and hacknet servers only) and expand as far as it can. I've applied some base values that seem to work for me, you may wish to modify them.
