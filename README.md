@@ -17,4 +17,4 @@ NOTE: the spread.js target selection currently does not follow the normal "use m
 ## Updates
 Added more functions to `utils.js` however it seems that in doing so I've drastically increased RAM requirements in a lot of places, I should really start importing specific functions instead of the whole thing.
 
-Added `./play-stocks.js` with some optional args that can be passed in. The args were mostly for me trying to figure out what numbers I should be using in the thresholds, but you may find them useful as well. I also really need to abstract my args parser thing better.
+Added `./play-stocks.js` with some optional args that can be passed in. Example of args usage: `./play-stocks -o volatility descending` will show all stocks sorted by volatility in descending order. The args were mostly for me trying to figure out what numbers I should be using in the thresholds, but you may find them useful as well. I also really need to abstract my args parser thing better.
