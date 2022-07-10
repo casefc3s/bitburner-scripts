@@ -15,12 +15,6 @@ export async function main(ns) {
 		waitTime = buyCheapestUpgrade(ns, numNodes) ? quickWaitTime : baseWaitTime;
 		await ns.sleep(waitTime);
 	}
-
-	var serverCost = ns.getPurchasedServerCost(ram);
-	ns.tprint(`Purchasing servers with ${ram}GB RAM.`);
-	ns.tprint(`Server cost: ${serverCost.toLocaleString()}`);
-
-	ns.tprint(`Purchased ${numPurchased} new ${ram}GB RAM servers.`);
 }
 
 function buyCheapestUpgrade(ns, numNodes) {

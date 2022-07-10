@@ -11,6 +11,8 @@ export async function main(ns) {
 		await setTarget(ns.args[0]);
 	}
 
+	// TODO: need to update, use a network of targets. apply formulas to get optimized thread usages and predictions. spread targets across servers based on task/available threads.
+
 	while (true) {
 		updateMaxPortsRequired(ns);
 		var servers = getAllServers(ns);
@@ -90,7 +92,7 @@ function updateMaxPortsRequired(ns) {
 		if (ns.fileExists(f, "home")) {
 			maxPortsRequired++;
 		}
-		// else if (ns.purchaseProgram(f)) {
+		// else if (ns.purchaseTor() && ns.purchaseProgram(f)) {
 		// 	maxPortsRequired++;
 		// }
 	}
@@ -145,15 +147,7 @@ function getAllServers(ns) {
 		currentScanLength = scanArray.length;
 		for (let i = previousScanLength; i < currentScanLength; i++) {
 			let currentHost = scanArray[i];
-			//let minSecurity = ns.getServerSecurityLevel(currentHost);
-			//let server = {hostname: currentHost, hacklevel: ns.getServerRequiredHackingLevel(currentHost), maxmoney: ns.getServerMaxMoney(currentHost), growth: ns.getServerGrowth(currentHost), minsecurity: minSecurity};
 			servers.push(currentHost);
-			/* uncomment this if you'd like to see a printout of the array as it is being made
-			ns.tprint(server.hostname);
-			ns.tprint('----------------');
-			ns.tprint('Difficulty: ' + server.hacklevel + ' | Potential: $' + server.maxmoney);
-			ns.tprint('Growth Rate: ' + server.growth + ' | Security: ' + server.minsecurity);
-			ns.tprint('----------------'); */
 			let newScan = ns.scan(currentHost);
 			for (let j = 0; j < newScan.length; j++) {
 				if (scanArray.indexOf(newScan[j]) == -1) {
